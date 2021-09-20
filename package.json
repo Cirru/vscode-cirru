@@ -1,0 +1,38 @@
+{
+  "name": "cirru-syntax",
+  "displayName": "Cirru Text Syntax",
+  "version": "0.0.1-a7",
+  "publisher": "jiyinyiyong",
+  "scripts": {
+    "pkg": "rm -vf *.vsix && vsce package"
+  },
+  "icon": "images/cirru-400x400.png",
+  "contributes": {
+    "languages": [
+      {
+        "id": "cirru",
+        "aliases": [
+          "cirru"
+        ],
+        "extensions": [
+          ".cirru"
+        ],
+        "configuration": "./cirru.configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "cirru",
+        "scopeName": "source.cirru",
+        "path": "./syntaxes/cirru.tmLanguage.json"
+      }
+    ]
+  },
+  "repository": "https://github.com/Cirru/vscode-cirru",
+  "devDependencies": {
+    "vsce": "^1.99.0"
+  },
+  "engines": {
+    "vscode": "0.10.x"
+  }
+}
